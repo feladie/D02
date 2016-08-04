@@ -38,16 +38,53 @@
 # (2) Write a function that draws a similar grid with four rows and four columns.
 ################################################################################
 # Write your functions below:
-# Body
+def do_twice(f):
+	f()
+	f()
 
+def do_four(f):
+	do_twice(f)
+	do_twice(f)
 
+def horizontal():
+	print('+ - - - -', end = ' ')
 
+def vertical():
+	print('|        ', end = " ")
 
+def horizontal_line():
+	do_twice(horizontal)
+	print('+')
 
+def horizontal_line_4():
+	do_four(horizontal)
+	print('+')
 
+def vertical_line():
+	do_twice(vertical)
+	print('|')
 
+def vertical_line_4():
+	do_four(vertical)
+	print('|')
 
+def print_horizontal():
+	horizontal_line()
+	do_four(vertical_line)
 
+def print_row_4():
+	horizontal_line_4()
+	do_four(vertical_line_4)
+
+def two_by_two():
+	do_twice(print_horizontal)
+	vertical_line()
+	horizontal_line()
+
+def four_by_four():
+	do_four(print_row_4)
+	horizontal_line_4()
+	
 
 
 
@@ -60,7 +97,8 @@ def main():
     four_by_four()
     """
     print("Hello World!")
-    
+    two_by_two()
+    four_by_four()
 
 
 

@@ -13,8 +13,9 @@
 #                                                                  monty
 ################################################################################
 # Write your function below:
-# Body
-
+def right_justify(s): 
+	print(" " * 70 + s)
+# fix to multiply string
 
 
 
@@ -27,7 +28,7 @@ def main():
     """Call your functions within this function."""
     print("Hello World!")
     right_justify("Python")
-    right_justify("YOUR_NAME")
+    right_justify("Anna")
 
 if __name__ == "__main__":
     main()
